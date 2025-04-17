@@ -1,4 +1,4 @@
-package infra
+package logger
 
 import (
 	"go.uber.org/zap"
@@ -6,7 +6,7 @@ import (
 
 var Logger *zap.Logger
 
-func InitLogger() error {
+func InitZapLogger() error {
 	var err error
 	Logger, err = zap.NewProduction()
 	if err != nil {
